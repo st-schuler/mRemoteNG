@@ -37,9 +37,7 @@ namespace mRemoteNG.UI.Panels
 
         private static void PrepareTabControllerSupport(bool noTabber, ConnectionWindow connectionForm)
         {
-            if (noTabber)
-                connectionForm.TabController.Dispose();
-            else
+            if (!noTabber)
                 Runtime.WindowList.Add(connectionForm);
         }
 
