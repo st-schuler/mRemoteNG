@@ -1265,7 +1265,58 @@ namespace mRemoteNG.UI.Window
 							strHide.Add("VNCViewOnly");
                             strHide.Add("SoundQuality");
                             break;
-						case ProtocolType.IntApp:
+                        case ProtocolType.SshGateway:
+                            strHide.Add("CacheBitmaps");
+                            strHide.Add("Colors");
+                            strHide.Add("DisplayThemes");
+                            strHide.Add("DisplayWallpaper");
+                            strHide.Add("EnableFontSmoothing");
+                            strHide.Add("EnableDesktopComposition");
+                            strHide.Add("Domain");
+                            strHide.Add("ExtApp");
+                            strHide.Add("ICAEncryptionStrength");
+                            strHide.Add("RDGatewayDomain");
+                            strHide.Add("RDGatewayHostname");
+                            strHide.Add("RDGatewayPassword");
+                            strHide.Add("RDGatewayUsageMethod");
+                            strHide.Add("RDGatewayUseConnectionCredentials");
+                            strHide.Add("RDGatewayUsername");
+                            strHide.Add("RDPAuthenticationLevel");
+                            strHide.Add("RDPMinutesToIdleTimeout");
+                            strHide.Add("RDPAlertIdleTimeout");
+                            strHide.Add("LoadBalanceInfo");
+                            strHide.Add("RedirectDiskDrives");
+                            strHide.Add("RedirectKeys");
+                            strHide.Add("RedirectPorts");
+                            strHide.Add("RedirectPrinters");
+                            strHide.Add("RedirectSmartCards");
+                            strHide.Add("RedirectSound");
+                            strHide.Add("RenderingEngine");
+                            strHide.Add("Resolution");
+                            strHide.Add("AutomaticResize");
+                            strHide.Add("UseConsoleSession");
+                            strHide.Add("UseCredSsp");
+                            strHide.Add("VNCAuthMode");
+                            strHide.Add("VNCColors");
+                            strHide.Add("VNCCompression");
+                            strHide.Add("VNCEncoding");
+                            strHide.Add("VNCProxyIP");
+                            strHide.Add("VNCProxyPassword");
+                            strHide.Add("VNCProxyPort");
+                            strHide.Add("VNCProxyType");
+                            strHide.Add("VNCProxyUsername");
+                            strHide.Add("VNCSmartSizeMode");
+                            strHide.Add("VNCViewOnly");
+                            strHide.Add("SoundQuality");
+                            strHide.Add("Panel");
+                            strHide.Add("PuttySession");
+                            strHide.Add("PreExtApp");
+                            strHide.Add("PostExtApp");
+                            strHide.Add("MacAddress");
+                            strHide.Add("UserField");
+                            strHide.Add("SshGateway");
+                            break;
+                        case ProtocolType.IntApp:
 							strHide.Add("CacheBitmaps");
 							strHide.Add("Colors");
 							strHide.Add("DisplayThemes");
@@ -1424,6 +1475,8 @@ namespace mRemoteNG.UI.Window
                             strHide.Add("RDGatewayHostname");
                         if(conI.Inheritance.SoundQuality)
                             strHide.Add("SoundQuality");
+                        if (conI.Inheritance.SshGateway)
+                            strHide.Add("SshGateway");
                     }
 					else
 					{

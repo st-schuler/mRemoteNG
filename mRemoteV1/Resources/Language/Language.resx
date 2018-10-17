@@ -2706,4 +2706,16 @@ This page will walk you through the process of upgrading your connections file o
   <data name="strConfirmCloseConnectionRightInstruction" xml:space="preserve">
     <value>Are you sure you want to close all connections to the right of "{0}"?</value>
   </data>
+  <data name="strSshGateway" xml:space="preserve">
+    <value>SSH-Gateway</value>
+  </data>
+  <data name="strPropertyDescriptionSshGateway" xml:space="preserve">
+    <value>Select a SSH-Gateway to tunnel this connection.</value>
+  </data>
+  <data name="strPropertyNameSshGateway" xml:space="preserve">
+    <value>SSH-Gateway</value>
+  </data>
+  <data name="strConnectionOpenSshGatewayUnknown" xml:space="preserve">
+    <value>SSH-Gateway not found!</value>
+  </data>
 </root>

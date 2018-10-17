@@ -241,6 +241,8 @@ namespace mRemoteNG.Connection
                         return (int)ProtocolHTTPS.Defaults.Port;
                     case ProtocolType.ICA:
                         return (int)IcaProtocol.Defaults.Port;
+                    case ProtocolType.SshGateway:
+                        return (int)ProtocolSshGateway.Defaults.Port;
                     case ProtocolType.IntApp:
                         return (int)IntegratedProgram.Defaults.Port;
                 }

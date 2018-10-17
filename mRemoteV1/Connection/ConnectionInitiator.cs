@@ -92,6 +92,36 @@ namespace mRemoteNG.Connection
                         return;
                 }
 
+                if(!string.IsNullOrWhiteSpace(connectionInfo.SshGateway))
+                {
+                    ConnectionInfo sshConnection = null;
+                    var connectionsList = Runtime.ConnectionsService.ConnectionTreeModel.GetRecursiveChildList();
+                    foreach (var connection in connectionsList)
+                    {
+                        if (connection.Protocol == Connection.Protocol.ProtocolType.SshGateway && connection.Name.Equals(connectionInfo.SshGateway))
+                        {
+                            sshConnection = connection;
+                            break;
+                        }
+                    }
+
+                    if(sshConnection == null)
+                    {
+                        Runtime.MessageCollector.AddMessage(MessageClass.ErrorMsg, Language.strConnectionOpenSshGatewayUnknown);
+                        return;
+                    }
+                    
+                    Renci.SshNet.SshClient ssh = new Renci.SshNet.SshClient(sshConnection.Hostname, sshConnection.Port, sshConnection.Username, sshConnection.Password);
+                    ssh.Connect();
+
+                    Renci.SshNet.ForwardedPortLocal port = new Renci.SshNet.ForwardedPortLocal("localhost", connectionInfo.Hostname, (uint)connectionInfo.Port);
+                    ssh.AddForwardedPort(port);
+                    port.Start();
+
+                    connectionInfo.Hostname = port.BoundHost;
+                    connectionInfo.Port = (int)port.BoundPort;
+                }
+
                 var protocolFactory = new ProtocolFactory();
                 var newProtocol = protocolFactory.CreateProtocol(connectionInfo);
 

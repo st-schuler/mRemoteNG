@@ -704,6 +704,13 @@ namespace mRemoteNG.Config.Serializers.Csv
                 if (bool.TryParse(connectionCsv[headers.IndexOf("InheritSoundQuality")], out value))
                     connectionRecord.Inheritance.SoundQuality = value;
             }
+
+            if (headers.Contains("InheritSshGateway"))
+            {
+                bool value;
+                if (bool.TryParse(connectionCsv[headers.IndexOf("InheritSshGateway")], out value))
+                    connectionRecord.Inheritance.SshGateway = value;
+            }
             #endregion
 
             return connectionRecord;

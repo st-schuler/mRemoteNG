@@ -24,6 +24,8 @@ namespace mRemoteNG.Connection.Protocol
         HTTPS = 8,
         [LocalizedAttributes.LocalizedDescription("strICA")]
         ICA = 9,
+        [LocalizedAttributes.LocalizedDescription("strSshGateway")]
+        SshGateway = 10,
         [LocalizedAttributes.LocalizedDescription("strExtApp")]
         IntApp = 20
 	}

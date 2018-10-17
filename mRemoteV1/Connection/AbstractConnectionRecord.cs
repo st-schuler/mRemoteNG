@@ -27,6 +27,7 @@ namespace mRemoteNG.Connection
 
         private ProtocolType _protocol;
         private string _extApp;
+        private string _sshGateway;
         private int _port;
         private string _puttySession;
         private IcaProtocol.EncryptionStrength _icaEncryption;
@@ -156,6 +157,16 @@ namespace mRemoteNG.Connection
         {
             get => GetPropertyValue("Domain", _domain).Trim();
             set => SetField(ref _domain, value?.Trim(), "Domain");
+        }
+
+        [LocalizedAttributes.LocalizedCategory("strCategoryConnection", 2),
+            LocalizedAttributes.LocalizedDisplayName("strPropertyNameSshGateway"),
+            LocalizedAttributes.LocalizedDescription("strPropertyDescriptionSshGateway"),
+            TypeConverter(typeof(SshGatewayTypeConverter))]
+        public string SshGateway
+        {
+            get => GetPropertyValue("SshGateway", _sshGateway);
+            set => SetField(ref _sshGateway, value, "SshGateway");
         }
         #endregion
 

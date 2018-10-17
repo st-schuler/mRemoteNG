@@ -521,6 +521,13 @@ namespace mRemoteNG.UI.Controls
 
             if (connectionInfo.Protocol == ProtocolType.IntApp)
                 _cMenTreeConnectWithOptionsNoCredentials.Enabled = false;
+
+            if(connectionInfo.Protocol == ProtocolType.SshGateway)
+            {
+                _cMenTreeConnect.Enabled = false;
+                _cMenTreeConnectWithOptions.Enabled = false;
+                _cMenTreeDisconnect.Enabled = false;
+            }
         }
 
         internal void DisableShortcutKeys()

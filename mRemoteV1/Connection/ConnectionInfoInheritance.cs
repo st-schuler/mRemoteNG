@@ -59,6 +59,13 @@ namespace mRemoteNG.Connection
         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
         [Browsable(true)]
         public bool Domain { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory("strCategoryConnection", 3),
+        LocalizedAttributes.LocalizedDisplayNameInheritAttribute("strPropertyNameSshGateway"),
+        LocalizedAttributes.LocalizedDescriptionInheritAttribute("strPropertyDescriptionSshGateway"),
+        TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool SshGateway { get; set; }
         #endregion
         #region Protocol
         [LocalizedAttributes.LocalizedCategory("strCategoryProtocol", 4), 
@@ -314,8 +321,7 @@ namespace mRemoteNG.Connection
 		LocalizedAttributes.LocalizedDescriptionInheritAttribute("strPropertyDescriptionViewOnly"), 
 		TypeConverter(typeof(MiscTools.YesNoTypeConverter))]public bool VNCViewOnly {get; set;}
         #endregion
-		
-		[Browsable(false)]
+        [Browsable(false)]
         public object Parent {get; set;}
         #endregion
 		

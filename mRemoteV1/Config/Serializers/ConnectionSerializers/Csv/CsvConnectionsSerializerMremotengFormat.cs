@@ -199,7 +199,8 @@ namespace mRemoteNG.Config.Serializers.Csv
                 .Append(FormatForCsv(con.Inheritance.RDGatewayDomain))
                 .Append(FormatForCsv(con.Inheritance.RDPAlertIdleTimeout))
                 .Append(FormatForCsv(con.Inheritance.RDPMinutesToIdleTimeout))
-                .Append(FormatForCsv(con.Inheritance.SoundQuality));
+                .Append(FormatForCsv(con.Inheritance.SoundQuality))
+                .Append(FormatForCsv(con.Inheritance.SshGateway));
         }
 
         private string FormatForCsv(object value)

@@ -236,6 +236,7 @@
     <Compile Include="Connection\IHasParent.cs" />
     <Compile Include="Connection\Protocol\Http\Connection.Protocol.HTTPS.CertEvent.cs" />
     <Compile Include="Connection\Protocol\ProtocolFactory.cs" />
+    <Compile Include="Connection\Protocol\SshGateway.cs" />
     <Compile Include="Connection\Protocol\RDP\AzureLoadBalanceInfoEncoder.cs" />
     <Compile Include="Connection\Protocol\VNC\VNCEnum.cs" />
     <Compile Include="Connection\WebHelper.cs" />
@@ -326,6 +327,7 @@
     <Compile Include="Tools\MultiSSHController.cs" />
     <Compile Include="Tools\MouseClickSimulator.cs" />
     <Compile Include="Tools\NotificationAreaIcon.cs" />
+    <Compile Include="Tools\SshGatewayTypeConverter.cs" />
     <Compile Include="Tools\WindowsRegistry\IRegistry.cs" />
     <Compile Include="Tools\WindowsRegistry\RegistryHive.cs" />
     <Compile Include="Tools\WindowsRegistry\WindowsRegistry.cs" />

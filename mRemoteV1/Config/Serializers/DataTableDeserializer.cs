@@ -79,6 +79,7 @@ namespace mRemoteNG.Config.Serializers
             connectionInfo.Domain = (string)dataRow["DomainName"];
             connectionInfo.Password = (string)dataRow["Password"];
             connectionInfo.Hostname = (string)dataRow["Hostname"];
+            connectionInfo.SshGateway = (string)dataRow["SshGateway"];
             connectionInfo.Protocol = (ProtocolType)Enum.Parse(typeof(ProtocolType), (string)dataRow["Protocol"]);
             connectionInfo.PuttySession = (string)dataRow["PuttySession"];
             connectionInfo.Port = (int)dataRow["Port"];
@@ -183,6 +184,7 @@ namespace mRemoteNG.Config.Serializers
             connectionInfo.Inheritance.RDGatewayUsername = (bool)dataRow["InheritRDGatewayUsername"];
             connectionInfo.Inheritance.RDGatewayPassword = (bool)dataRow["InheritRDGatewayPassword"];
             connectionInfo.Inheritance.RDGatewayDomain = (bool)dataRow["InheritRDGatewayDomain"];
+            connectionInfo.Inheritance.SshGateway = (bool)dataRow["InheritSshGateway"];
         }
 
         private ConnectionTreeModel CreateNodeHierarchy(List<ConnectionInfo> connectionList, DataTable dataTable)

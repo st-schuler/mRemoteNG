@@ -53,6 +53,9 @@ namespace mRemoteNG.Connection.Protocol
 					newProtocol = new IcaProtocol();
 					((IcaProtocol) newProtocol).tmrReconnect.Elapsed += ((IcaProtocol) newProtocol).tmrReconnect_Elapsed;
 					break;
+                case ProtocolType.SshGateway:
+                    newProtocol = new ProtocolSshGateway();
+                    break;
 				case ProtocolType.IntApp:
 					newProtocol = new IntegratedProgram();
 					if (connectionInfo.ExtApp == "")
