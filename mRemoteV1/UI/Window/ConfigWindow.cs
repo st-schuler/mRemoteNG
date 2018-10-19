@@ -859,6 +859,7 @@ namespace mRemoteNG.UI.Window
                     strHide.Add("Description");
                     strHide.Add("SoundQuality");
                     strHide.Add("CredentialRecord");
+                    strHide.Add("SshGateway");
                 }
                 else if (_pGrid.SelectedObject is ConnectionInfo)
 				{
@@ -1325,6 +1326,7 @@ namespace mRemoteNG.UI.Window
                             strHide.Add("MacAddress");
                             strHide.Add("UserField");
                             strHide.Add("SshGateway");
+                            strHide.Add("RedirectClipboard");
                             break;
                         case ProtocolType.IntApp:
 							strHide.Add("CacheBitmaps");

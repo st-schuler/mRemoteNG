@@ -507,6 +507,9 @@ namespace mRemoteNG.Config.Serializers.Xml
                     connectionInfo.Inheritance.RDPMinutesToIdleTimeout = bool.Parse(xmlnode.Attributes["InheritRDPMinutesToIdleTimeout"]?.Value ?? "False");
                     connectionInfo.RDPAlertIdleTimeout = bool.Parse(xmlnode.Attributes["RDPAlertIdleTimeout"]?.Value ?? "False");
                     connectionInfo.Inheritance.RDPAlertIdleTimeout = bool.Parse(xmlnode.Attributes["InheritRDPAlertIdleTimeout"]?.Value ?? "False");
+
+                    connectionInfo.SshGateway = xmlnode.Attributes["SshGateway"].Value;
+                    connectionInfo.Inheritance.SshGateway = bool.Parse(xmlnode.Attributes["InheritSshGateway"].Value);
                 }
                 if(_confVersion >= 2.7)
                 {

@@ -85,6 +85,7 @@
     <xs:attribute name="RDGatewayUsername" type="xs:string" use="required" />
     <xs:attribute name="RDGatewayPassword" type="xs:string" use="required" />
     <xs:attribute name="RDGatewayDomain" type="xs:string" use="required" />
+    <xs:attribute name="SshGateway" type="xs:string" use="required" />
     <xs:attribute name="InheritCredentialRecord" type="xs:boolean" use="optional" />
     <xs:attribute name="InheritCacheBitmaps" type="xs:boolean" use="optional" />
     <xs:attribute name="InheritColors" type="xs:boolean" use="optional" />
@@ -140,5 +141,6 @@
     <xs:attribute name="InheritRDGatewayUsername" type="xs:boolean" use="optional" />
     <xs:attribute name="InheritRDGatewayPassword" type="xs:boolean" use="optional" />
     <xs:attribute name="InheritRDGatewayDomain" type="xs:boolean" use="optional" />
+    <xs:attribute name="InheritSshGateway" type="xs:boolean" use="optional" />
   </xs:complexType>
 </xs:schema>

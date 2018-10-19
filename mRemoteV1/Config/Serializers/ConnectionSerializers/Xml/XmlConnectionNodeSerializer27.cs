@@ -101,6 +101,7 @@ namespace mRemoteNG.Config.Serializers.Xml
             element.Add(new XAttribute("VNCProxyType", connectionInfo.VNCProxyType));
             element.Add(new XAttribute("VNCProxyIP", connectionInfo.VNCProxyIP));
             element.Add(new XAttribute("VNCProxyPort", connectionInfo.VNCProxyPort));
+            element.Add(new XAttribute("SshGateway", connectionInfo.SshGateway));
 
             element.Add(_saveFilter.SaveUsername
                 ? new XAttribute("VNCProxyUsername", connectionInfo.VNCProxyUsername)
@@ -191,6 +192,7 @@ namespace mRemoteNG.Config.Serializers.Xml
                 element.Add(new XAttribute("InheritRDGatewayUsername", connectionInfo.Inheritance.RDGatewayUsername.ToString().ToLowerInvariant()));
                 element.Add(new XAttribute("InheritRDGatewayPassword", connectionInfo.Inheritance.RDGatewayPassword.ToString().ToLowerInvariant()));
                 element.Add(new XAttribute("InheritRDGatewayDomain", connectionInfo.Inheritance.RDGatewayDomain.ToString().ToLowerInvariant()));
+                element.Add(new XAttribute("InheritSshGateway", connectionInfo.Inheritance.SshGateway.ToString().ToLowerInvariant()));
             }
             else
             {
@@ -250,6 +252,7 @@ namespace mRemoteNG.Config.Serializers.Xml
                 element.Add(new XAttribute("InheritRDGatewayUsername", falseString));
                 element.Add(new XAttribute("InheritRDGatewayPassword", falseString));
                 element.Add(new XAttribute("InheritRDGatewayDomain", falseString));
+                element.Add(new XAttribute("InheritSshGateway", falseString));
             }
         }
     }

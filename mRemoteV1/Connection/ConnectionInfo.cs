@@ -270,6 +270,7 @@ namespace mRemoteNG.Connection
         private void SetConnectionDefaults()
         {
             Hostname = string.Empty;
+            SshGateway = Settings.Default.ConDefaultSshGateway;
         }
 
         private void SetProtocolDefaults()
